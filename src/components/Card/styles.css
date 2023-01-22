@@ -1,0 +1,70 @@
+.card {
+  background-color: var(--color-grey-1);
+  padding: 0.75rem 1.125rem;
+  border-radius: var(--radius-1);
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: card .5s ease forwards;
+}
+
+@keyframes card {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.entrada {
+  position: relative;
+}
+
+.entrada::before {
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 100%;
+  top: 0;
+  left: 0.0625rem;
+  background-color: var(--color-secondary);
+  position: absolute;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.despesa {
+  position: relative;
+}
+
+.despesa::before {
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 100%;
+  top: 0;
+  left: 0.0625rem;
+  background-color: var(--color-grey-2);
+  position: absolute;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-card h3 {
+  flex-grow: 0.5;
+  font-size: var(--title-3);
+}
+
+.header-card p {
+  font-size: var(--body);
+}
+
+.card small {
+  display: block;
+  margin-top: 1rem;
+  color: var(--color-grey-3);
+}

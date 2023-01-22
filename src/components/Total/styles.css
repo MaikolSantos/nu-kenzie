@@ -1,0 +1,27 @@
+.wrapper-value {
+  padding: 1.5rem;
+  border: 0.0625rem solid var(--color-grey-2);
+  border-radius: var(--radius-2);
+  width: 100%;
+}
+
+.wrapper-value h2 {
+  display: flex;
+  font-size: var(--title-3);
+  justify-content: space-between;
+  margin-bottom: .5rem;
+}
+
+.wrapper-value h2 span + span {
+  color: var(--color-primary-1);
+}
+
+.wrapper-value small {
+  font-size: var(--medium);
+}
+
+@media (min-width: 700px) {
+  .wrapper-value {
+    max-width: 19.625rem;
+  }
+}

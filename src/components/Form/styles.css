@@ -1,0 +1,105 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 2.375rem 1.5rem;
+  border: 0.0625rem solid var(--color-grey-2);
+  border-radius: var(--radius-2);
+}
+
+.wrapper-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-input label {
+  font-size: var(--medium);
+  margin-bottom: 0.75rem;
+}
+
+.wrapper-input input,
+.wrapper-input select {
+  border: 0.125rem solid transparent;
+  outline: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-1);
+  background-color: var(--color-grey-1);
+  color: var(--color-grey-4);
+  font-size: 1rem;
+}
+
+.wrapper-input input:focus,
+.wrapper-input select:focus {
+  border-color: var(--color-primary-1);
+}
+
+.wrapper-input input::placeholder {
+  color: var(--color-grey-3);
+}
+
+.wrapper-input select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.wrapper-input.type {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+.wrapper-input.type::before {
+  content: 'ˇ';
+  font-size: var(--title-1);
+  display: block;
+  color: var(--color-grey-4);
+  position: absolute;
+  bottom: -0.1875rem;
+  right: 1rem;
+  z-index: 1;
+
+}
+
+.wrapper-input small {
+  font-size: 0.75rem;
+  color: var(--color-grey-3);
+  margin-top: 0.3125rem;
+}
+
+.wrapper-input.value {
+  position: relative;
+}
+
+.wrapper-input.value::before {
+  content: "R$";
+  color: var(--color-grey-3);
+  background-color: var(--color-grey-1);
+  display: block;
+  position: absolute;
+  bottom: .875rem;
+  right: 1.125rem;
+  z-index: 1;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  form {
+    max-width: 19.625rem;
+  }
+
+  .input-group {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .input-group .wrapper-input input,
+  .input-group .wrapper-input select {
+    width: 8rem;
+  }
+}

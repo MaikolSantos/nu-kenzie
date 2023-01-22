@@ -1,0 +1,62 @@
+.wrapper {
+  display: none;
+  animation: svg 3s linear infinite alternate;
+}
+
+@keyframes svg {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-right {
+  animation: card-right 4s linear infinite;
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+@keyframes card-right {
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+}
+
+.card-left {
+  animation: card-left 4s linear infinite 1s;
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+@keyframes card-left {
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    width: 55%;
+    display: block;
+  }
+}
